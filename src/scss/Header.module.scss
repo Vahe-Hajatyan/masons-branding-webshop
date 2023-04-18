@@ -1,0 +1,99 @@
+@import "font";
+@import "vars";
+.headerBlock {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-around;
+  .searchBlock {
+    display: flex;
+    position: relative;
+    align-items: center;
+    .search {
+      color: $white;
+      background: transparent;
+      width: 185px;
+      height: 30px;
+      border-radius: 15px;
+      border: 1px solid;
+      padding-left: 40px;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 12px;
+    }
+    .buttonSearch {
+      cursor: pointer;
+      border: none;
+      position: absolute;
+      left: 0px;
+      top: 16px;
+      background: url(/src/assets/lupa.png) no-repeat 10px 10px;
+      width: 35px;
+      height: 35px;
+      border-radius: 22px;
+    }
+  }
+  //   .logoBlock {
+  //   }
+  .flexContainer {
+    display: inline-flex;
+    align-items: center;
+    .item {
+      button {
+        cursor: pointer;
+        color: $white;
+        background: transparent;
+        border: none;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+      }
+    }
+    .item:nth-child(4) {
+      margin: 0 5px 0 10px;
+    }
+    .line {
+      border: 1px solid $white;
+      width: 0;
+      height: 20px;
+      margin: 0 5px;
+    }
+    span {
+      color: $white;
+    }
+  }
+}
+
+.categories {
+  ul {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+  }
+  li {
+    color: $white;
+    font-family: "Montserrat-Light";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 22px;
+    width: 160px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 200ms;
+    &:hover {
+      transition: 200ms;
+      color: $black;
+      font-family: "Montserrat-Bold";
+      font-weight: 700;
+      background: $white;
+      transform: matrix(1, 0, -0.2, 1, 0, 0);
+    }
+  }
+}
