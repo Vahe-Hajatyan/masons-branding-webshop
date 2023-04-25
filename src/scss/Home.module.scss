@@ -16,48 +16,174 @@
     .textBlock {
       display: flex;
       flex-direction: column;
-      h1 {
-        font-family: "Montserrat-Bold";
+    }
+  }
+}
+.btn {
+  cursor: pointer;
+  width: 200px;
+  height: 60px;
+  background: $yellow;
+  box-shadow: 0px 0px 10px $yellow;
+  font-family: "Montserrat-Bold";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #1c1c1c;
+  border: none;
+  transition: 200ms;
+  &:hover {
+    box-shadow: 0px 0px 16px $yellow;
+  }
+}
+h1,
+h2 {
+  font-family: "Montserrat-Bold";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 82px;
+  line-height: 95%;
+  text-transform: uppercase;
+  color: $white;
+  margin: 80px 0 0 0;
+  span {
+    color: $yellow;
+    text-shadow: 0px 0px 15px $yellow;
+  }
+}
+p {
+  height: 60px;
+  font-family: "Montserrat-Light";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color: #a8a8a8;
+}
+hr {
+  margin: 0;
+  box-shadow: 0px 0px 15px #fff;
+}
+
+.ourServices {
+  text-align: center;
+  .services {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    .itemServices {
+      position: relative;
+      margin: 0 15px 90px 15px;
+      h3 {
+        position: absolute;
+        top: 15%;
+        left: 50%;
+        right: -5%;
+        transform: translate(-50%, -50%);
+        font-family: "Montserrat-bold";
         font-style: normal;
-        font-weight: 800;
-        font-size: 82px;
-        line-height: 95%;
-        text-transform: uppercase;
-        color: $white;
-        span {
-          color: $yellow;
-          text-shadow: 0px 0px 15px $yellow;
-        }
-      }
-      p {
-        max-width: 500px;
-        height: 60px;
-        font-family: "Montserrat-Light";
-        font-style: normal;
-        font-weight: 400;
+        font-weight: 700;
         font-size: 24px;
         line-height: 29px;
-        color: #a8a8a8;
+        text-transform: uppercase;
+        color: $white;
+        margin: 0;
+      }
+      p {
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        right: -10%;
+        transform: translate(-50%, -50%);
+        font-size: 16px;
+        font-family: "MontserratAlternates-Regular";
+        text-align: initial;
       }
       button {
         cursor: pointer;
-        width: 200px;
-        height: 60px;
-        background: $yellow;
-        box-shadow: 0px 0px 10px $yellow;
-        font-family: "Montserrat-Bold";
-        font-style: normal;
-        font-weight: 800;
-        font-size: 20px;
-        line-height: 100%;
-        text-transform: uppercase;
-        color: #1c1c1c;
+        position: absolute;
+        top: 57%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 150px;
+        height: 50px;
+        background: #171717;
         border: none;
-        transition: 200ms;
-        &:hover {
-          box-shadow: 0px 0px 16px #ffca0d;
-        }
+        color: $yellow;
+      }
+      .icon {
+        position: absolute;
+        top: 88%;
+        left: 50%;
+        transform: translate(-50%, -50%);
       }
     }
+  }
+}
+
+.printExample {
+  margin-left: 10%;
+  h2 {
+    color: $white;
+    font-family: "Montserrat-bold";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 59px;
+    margin-bottom: 0px;
+    span {
+      color: $yellow;
+    }
+  }
+  p {
+    font-size: 32px;
+    margin-top: 0px;
+  }
+}
+
+.stock {
+  margin: 13% 0 0 10%;
+  h2 {
+    word-break: break-all;
+    font-size: 48px;
+    margin: 0 0 7px 0;
+  }
+  p {
+    margin: 0;
+    font-size: 32px;
+  }
+}
+.stockSlider {
+  background: url(../assets/dexinFon.png);
+  margin: -65px 0 50px 0;
+  height: 629px;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+
+  .stockTextBlock {
+    h2 {
+      font-size: 52px;
+      color: $black;
+    }
+    p {
+      font-size: 22px;
+      color: $black;
+    }
+    .btn {
+      background: $black;
+      color: $white;
+      box-shadow: 0px 0px 10px $black;
+      margin-left: 10px;
+      &:hover {
+        box-shadow: 0px 0px 20px $black;
+      }
+    }
+  }
+
+  .ImgBlock {
+    width: 30%;
   }
 }
