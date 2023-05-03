@@ -1,0 +1,63 @@
+@import "vars.scss";
+footer {
+  background: $black2;
+  .footerBlock {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 60px 0 10px 0;
+    .logoBlock {
+      display: flex;
+      flex-direction: column;
+      .linkBlock {
+        display: flex;
+        .btn2 {
+          cursor: pointer;
+          background: $yellow;
+          border: none;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 40px;
+          height: 35px;
+          border-radius: 5px;
+          margin: 10px 10px 10px 0;
+          img {
+            width: 21px;
+            height: 18px;
+          }
+        }
+      }
+    }
+    .pageBlock {
+      display: flex;
+      flex-direction: column;
+      h2 {
+        margin: 0 0 10px 0;
+        font-size: 20px;
+      }
+      p {
+        cursor: pointer;
+        height: auto;
+        margin: 10px 0 0 0;
+      }
+      p:hover {
+        color: $yellow;
+      }
+      a {
+        margin-top: 10px;
+        font-family: "Montserrat-Light";
+        text-decoration: none;
+        color: #a8a8a8;
+        font-size: 20px;
+      }
+    }
+  }
+  hr {
+    margin-top: 30px;
+  }
+  .copyright {
+    margin: 25px 0 0 50px;
+    font-size: 20px;
+  }
+}

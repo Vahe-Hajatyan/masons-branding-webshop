@@ -5,7 +5,7 @@ import karzina from "../assets/karzina.png";
 import izbrnie from "../assets/izbrnie.png";
 const Header = () => {
   return (
-    <>
+    <header>
       <div className={style.headerBlock}>
         <div className={style.searchBlock}>
           <input placeholder="Поиск" className={style.search} />
@@ -43,7 +43,7 @@ const Header = () => {
           <li>аксессуары</li>
         </ul>
       </div>
-    </>
+    </header>
   );
 };
 

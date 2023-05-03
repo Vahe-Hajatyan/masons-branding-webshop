@@ -9,7 +9,7 @@ import blackRightButton from "../../assets/blackRight.png";
 
 const TRANSITION_DURATION = 300;
 
-export const Carousel = ({ children, infinite, twoSlide }) => {
+export const Carousel = ({ children, infinite, oneSlide, number3 }) => {
   const [offset, setOffset] = useState(0);
   const [width, setWidth] = useState(450);
   const [pages, setPages] = useState([]);
@@ -92,26 +92,38 @@ export const Carousel = ({ children, infinite, twoSlide }) => {
   };
   return (
     <CarouselContext.Provider value={{ width }}>
-      <div className={style.slider_block}>
-        <div className={style.button_block}>
+      <div
+        className={`${number3 ? style.slider_block_number3 : ""} ${
+          style.slider_block
+        }`}
+      >
+        <div
+          className={`${number3 ? style.button_block_number3 : ""} ${
+            style.button_block
+          }`}
+        >
           <a onClick={handleLeftArrowClick}>
-            <img src={twoSlide ? blackLeftButton : leftButton} />
+            <img src={oneSlide ? blackLeftButton : leftButton} />
           </a>
         </div>
         <div
           className={`${style.itemBlock} ${
-            twoSlide ? style.itemBlock_onePage : ""
+            oneSlide
+              ? number3
+                ? style.itemBlock_number3
+                : style.itemBlock_onePage
+              : ""
           }`}
         >
           <div className={style.item}>
             <div
               className={`${style.container} ${
-                twoSlide ? style.container_onePage : ""
+                oneSlide ? style.container_onePage : ""
               }`}
             >
               <div
                 className={`${style.window} ${
-                  twoSlide ? style.window_onePage : ""
+                  oneSlide ? style.window_onePage : ""
                 }`}
                 ref={windowElRef}
               >
@@ -128,9 +140,13 @@ export const Carousel = ({ children, infinite, twoSlide }) => {
             </div>
           </div>
         </div>
-        <div className={style.button_block}>
+        <div
+          className={`${number3 ? style.button_block_number3 : ""} ${
+            style.button_block
+          }`}
+        >
           <a onClick={handleRightArrowClick}>
-            <img src={twoSlide ? blackRightButton : rightButton} />
+            <img src={oneSlide ? blackRightButton : rightButton} />
           </a>
         </div>
       </div>

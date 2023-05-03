@@ -2,4 +2,12 @@ body {
   transition: 100ms;
   margin: 0;
   background: #070707;
+  &::-webkit-scrollbar {
+    background: transparent;
+    width: 10px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #ffca0d;
+    border-radius: 99px;
+  }
 }

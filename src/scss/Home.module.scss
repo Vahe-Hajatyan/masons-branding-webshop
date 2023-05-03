@@ -69,6 +69,11 @@ hr {
 
 .ourServices {
   text-align: center;
+  .ourServicesTitle {
+    p {
+      font-family: "MontserratAlternates-Regular";
+    }
+  }
   .services {
     display: flex;
     justify-content: space-evenly;
@@ -138,7 +143,8 @@ hr {
     }
   }
   p {
-    font-size: 32px;
+    font-family: "MontserratAlternates-Regular";
+    font-size: 30px;
     margin-top: 0px;
   }
 }
@@ -151,16 +157,17 @@ hr {
     margin: 0 0 7px 0;
   }
   p {
+    font-family: "MontserratAlternates-Regular";
     margin: 0;
     font-size: 32px;
   }
 }
+
 .stockSlider {
   background: url(../assets/dexinFon.png);
+  background-size: cover;
   margin: -65px 0 50px 0;
-  height: 629px;
-  align-items: center;
-  justify-content: space-evenly;
+  height: 662px;
   width: 100%;
 
   .stockTextBlock {
@@ -185,5 +192,207 @@ hr {
 
   .ImgBlock {
     width: 30%;
+  }
+}
+
+.titleBlock {
+  margin: 10% 0 6% 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  h2 {
+    word-break: break-all;
+    font-size: 72px;
+    margin: 0 0 7px 0;
+  }
+  p {
+    font-family: "MontserratAlternates-Regular";
+    margin: 0;
+    font-size: 32px;
+  }
+}
+
+.categories {
+  ul {
+    padding: 0;
+    margin-top: 25px;
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+  }
+  li {
+    cursor: pointer;
+    color: #fff;
+    font-family: "Montserrat-Light";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 22px;
+    height: 50px;
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 200ms;
+    padding: 0px 5px;
+    &:hover {
+      transition: 200ms;
+      color: $black;
+      font-family: "Montserrat-Bold";
+      font-weight: 700;
+      background: $yellow;
+      box-shadow: 0px 0px 10px $yellow;
+    }
+  }
+}
+.topSellingBlock {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  .topSellingitem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+      width: 230px;
+      height: 250px;
+    }
+    p {
+      font-size: 20px;
+      margin: 10px 0 5px 0;
+      height: auto;
+    }
+  }
+}
+
+.catalogBlock {
+  justify-content: center;
+  .catalog {
+    cursor: pointer;
+    width: 355px;
+    background: $black2;
+    margin: 15px 5px;
+    padding-top: 10px;
+    transition: 500ms;
+  }
+  .catalog:hover {
+    box-shadow: 0px 0px 15px #ffffff47;
+    transition: 500ms;
+  }
+}
+.reviewsBlock {
+  background: url(/src/assets/fon2.png);
+  background-size: cover;
+  margin: 180px 0 50px 0;
+  height: 602px;
+  width: 100%;
+}
+
+.videoBlock {
+  margin-top: 25%;
+  .titleBlock {
+    text-align: initial;
+    margin: 0 0 0 11%;
+    h2 {
+      font-size: 48px;
+    }
+  }
+  .videoItem {
+    margin: 30px 0 0 15%;
+    iframe {
+      width: 85%;
+      height: 30em;
+    }
+  }
+}
+
+.contactUs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  .formBlock {
+    display: flex;
+    form {
+      input {
+        display: flex;
+        color: $yellow;
+        background: $black2;
+        width: 370px;
+        height: 50px;
+        border: none;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 12px;
+        margin-bottom: 20px;
+        outline: none;
+        transform: matrix(1, 0, -0.2, 1, 0, 0);
+        &::placeholder {
+          color: $yellow;
+        }
+      }
+      .btn {
+        display: block;
+      }
+      .linkBlock {
+        display: flex;
+        .btn2 {
+          cursor: pointer;
+          background: $yellow;
+          border: none;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 40px;
+          height: 35px;
+          border-radius: 5px;
+          margin: 10px 10px 10px 0;
+          img {
+            width: 21px;
+            height: 18px;
+          }
+        }
+      }
+    }
+  }
+  .mapBlock {
+    iframe {
+      border: 0;
+      width: 500px;
+      height: 500px;
+    }
+  }
+}
+
+.contactBlock {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 130px 0;
+  .contactItem {
+    background: $black2;
+    width: 300px;
+    height: 350px;
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    text-align: center;
+    padding-top: 100px;
+    margin: 10px 0;
+    .title {
+      font-size: 32px;
+    }
+    a {
+      font-family: "Montserrat-Light";
+      text-decoration: none;
+      color: #a8a8a8;
+      font-size: 20px;
+    }
+    p {
+      font-size: 20px;
+    }
   }
 }
