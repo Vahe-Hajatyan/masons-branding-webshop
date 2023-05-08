@@ -3,19 +3,48 @@
 
 .homeBlock {
   margin-left: 120px;
+  @media (max-width: 1024px) {
+    margin-left: 80px;
+  }
+  @media (max-width: 767px) {
+    margin-left: 0;
+  }
   .container {
     display: flex;
     flex-direction: row;
+    @media (max-width: 767px) {
+      flex-direction: column;
+    }
     .imgBlock {
       display: flex;
+      @media (max-width: 767px) {
+        justify-content: center;
+      }
       img {
         width: 100%;
         height: 100%;
+        @media (max-width: 767px) {
+          width: 80%;
+        }
       }
     }
     .textBlock {
       display: flex;
       flex-direction: column;
+      @media (max-width: 767px) {
+        align-items: center;
+        text-align: center;
+      }
+
+      p {
+        margin-top: 20px;
+        @media (max-width: 1080px) {
+          height: auto;
+        }
+      }
+      .btn {
+        margin-bottom: 20px;
+      }
     }
   }
 }
@@ -48,23 +77,44 @@ h2 {
   text-transform: uppercase;
   color: $white;
   margin: 80px 0 0 0;
+
+  @media (max-width: 1080px) {
+    font-size: 65px;
+  }
+  @media (max-width: 906px) {
+    font-size: 55px;
+  }
+  @media (max-width: 767px) {
+    font-size: 82px;
+    margin: 60px 0 0 0;
+  }
+  @media (max-width: 550px) {
+    font-size: 57px;
+  }
+  @media (max-width: 410px) {
+    font-size: 46px;
+  }
   span {
     color: $yellow;
     text-shadow: 0px 0px 15px $yellow;
   }
 }
 p {
+  margin-top: 0;
   height: 60px;
   font-family: "Montserrat-Light";
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
   line-height: 29px;
-  color: #a8a8a8;
+  color: $grey;
+  @media (max-width: 353px) {
+    font-size: 17px;
+  }
 }
 hr {
   margin: 0;
-  box-shadow: 0px 0px 15px #fff;
+  box-shadow: 0px 5px 15px #fff;
 }
 
 .ourServices {
@@ -81,6 +131,7 @@ hr {
     .itemServices {
       position: relative;
       margin: 0 15px 90px 15px;
+
       h3 {
         position: absolute;
         top: 15%;
@@ -136,16 +187,26 @@ hr {
     font-style: normal;
     font-weight: 600;
     font-size: 48px;
-    line-height: 59px;
     margin-bottom: 0px;
+    @media (max-width: 556px) {
+      font-size: 40px;
+    }
+    @media (max-width: 445px) {
+      font-size: 30px;
+    }
     span {
       color: $yellow;
     }
   }
   p {
     font-family: "MontserratAlternates-Regular";
-    font-size: 30px;
-    margin-top: 0px;
+    font-size: 28px;
+    @media (max-width: 556px) {
+      font-size: 19px;
+    }
+    @media (max-width: 445px) {
+      font-size: 17px;
+    }
   }
 }
 
@@ -155,11 +216,35 @@ hr {
     word-break: break-all;
     font-size: 48px;
     margin: 0 0 7px 0;
+    @media (max-width: 800px) {
+      font-size: 40px;
+    }
+    @media (max-width: 652px) {
+      font-size: 34px;
+    }
+    @media (max-width: 556px) {
+      font-size: 30px;
+    }
+    @media (max-width: 490px) {
+      font-size: 25px;
+    }
+    @media (max-width: 425px) {
+      font-size: 20px;
+    }
   }
   p {
     font-family: "MontserratAlternates-Regular";
     margin: 0;
     font-size: 32px;
+    @media (max-width: 768px) {
+      font-size: 29px;
+    }
+    @media (max-width: 684px) {
+      font-size: 24px;
+    }
+    @media (max-width: 490px) {
+      font-size: 20px;
+    }
   }
 }
 
@@ -170,28 +255,68 @@ hr {
   height: 662px;
   width: 100%;
 
-  .stockTextBlock {
-    h2 {
-      font-size: 52px;
-      color: $black;
+  .stockBlock {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    @media (max-width: 880px) {
+      flex-wrap: wrap;
     }
-    p {
-      font-size: 22px;
-      color: $black;
-    }
-    .btn {
-      background: $black;
-      color: $white;
-      box-shadow: 0px 0px 10px $black;
-      margin-left: 10px;
-      &:hover {
-        box-shadow: 0px 0px 20px $black;
+
+    .stockTextBlock {
+      @media (max-width: 880px) {
+        text-align: center;
+      }
+      h2 {
+        font-size: 52px;
+        color: $black;
+        @media (max-width: 356px) {
+          font-size: 46px;
+        }
+      }
+      br {
+        @media (max-width: 424px) {
+          display: none;
+        }
+      }
+      p {
+        font-size: 22px;
+        color: $black;
+        @media (max-width: 640px) {
+          font-size: 17px;
+          height: auto;
+        }
+        @media (max-width: 423px) {
+          font-size: 14px;
+          height: auto;
+        }
+      }
+      .btn {
+        background: $black;
+        color: $white;
+        box-shadow: 0px 0px 10px $black;
+        margin-left: 10px;
+        @media (max-width: 420px) {
+          width: 165px;
+        }
+        &:hover {
+          box-shadow: 0px 0px 20px $black;
+        }
       }
     }
   }
 
   .ImgBlock {
     width: 30%;
+    @media (max-width: 880px) {
+      width: 42%;
+    }
+    @media (max-width: 630px) {
+      width: 50%;
+    }
+    @media (max-width: 526px) {
+      width: 220px;
+    }
   }
 }
 
@@ -204,11 +329,34 @@ hr {
     word-break: break-all;
     font-size: 72px;
     margin: 0 0 7px 0;
+    @media (max-width: 620px) {
+      font-size: 65px;
+    }
+    @media (max-width: 517px) {
+      font-size: 57px;
+    }
+    @media (max-width: 437px) {
+      font-size: 42px;
+    }
+  }
+  br {
+    @media (max-width: 403px) {
+      display: none;
+    }
   }
   p {
     font-family: "MontserratAlternates-Regular";
     margin: 0;
     font-size: 32px;
+    @media (max-width: 768px) {
+      font-size: 29px;
+    }
+    @media (max-width: 684px) {
+      font-size: 24px;
+    }
+    @media (max-width: 490px) {
+      font-size: 20px;
+    }
   }
 }
 
@@ -236,6 +384,16 @@ hr {
     justify-content: center;
     transition: 200ms;
     padding: 0px 5px;
+    @media (max-width: 1150px) {
+      width: auto;
+    }
+    @media (max-width: 670px) {
+      font-size: 15px;
+    }
+    @media (max-width: 450px) {
+      font-size: 12px;
+      height: 40px;
+    }
     &:hover {
       transition: 200ms;
       color: $black;
@@ -287,15 +445,51 @@ hr {
   margin: 180px 0 50px 0;
   height: 602px;
   width: 100%;
+  @media (max-width: 413px) {
+    margin: 100px 0 0 0;
+  }
 }
 
 .videoBlock {
   margin-top: 25%;
+  @media (max-width: 466px) {
+    margin-top: 0;
+  }
   .titleBlock {
     text-align: initial;
     margin: 0 0 0 11%;
     h2 {
       font-size: 48px;
+      @media (max-width: 750px) {
+        font-size: 40px;
+      }
+      @media (max-width: 640px) {
+        font-size: 34px;
+      }
+      @media (max-width: 540px) {
+        font-size: 30px;
+      }
+      @media (max-width: 470px) {
+        font-size: 25px;
+      }
+      @media (max-width: 405px) {
+        font-size: 22px;
+      }
+    }
+    p {
+      font-size: 32px;
+      @media (max-width: 1000px) {
+        font-size: 29px;
+      }
+      @media (max-width: 885px) {
+        font-size: 25px;
+      }
+      @media (max-width: 770px) {
+        font-size: 20px;
+      }
+      @media (max-width: 622px) {
+        font-size: 17px;
+      }
     }
   }
   .videoItem {
@@ -303,16 +497,57 @@ hr {
     iframe {
       width: 85%;
       height: 30em;
+      @media (max-width: 886px) {
+        height: 23em;
+      }
+      @media (max-width: 700px) {
+        height: 18em;
+      }
+      @media (max-width: 590px) {
+        height: 15em;
+      }
+      @media (max-width: 455px) {
+        height: 12em;
+      }
     }
   }
 }
-
+.contactTitle {
+  margin: 10% 0 6% 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  h2 {
+    word-break: break-all;
+    font-size: 72px;
+    margin: 0 0 7px 0;
+    @media (max-width: 860px) {
+      font-size: 65px;
+    }
+    @media (max-width: 770px) {
+      font-size: 57px;
+    }
+    @media (max-width: 675px) {
+      font-size: 47px;
+    }
+    @media (max-width: 550px) {
+      font-size: 37px;
+    }
+    @media (max-width: 440px) {
+      font-size: 30px;
+    }
+    @media (max-width: 366px) {
+      font-size: 27px;
+    }
+  }
+}
 .contactUs {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   .formBlock {
     display: flex;
+    margin: 0 15px;
     form {
       input {
         display: flex;
@@ -331,15 +566,32 @@ hr {
         margin-bottom: 20px;
         outline: none;
         transform: matrix(1, 0, -0.2, 1, 0, 0);
+        @media (max-width: 530px) {
+          width: 310px;
+        }
+        @media (max-width: 410px) {
+          width: 243px;
+        }
         &::placeholder {
           color: $yellow;
         }
       }
       .btn {
         display: block;
+        @media (max-width: 919px) {
+          display: inline-block;
+          margin: 0 10px 20px 0;
+        }
+        @media (max-width: 410px) {
+          width: 145px;
+          font-size: 15px;
+        }
       }
       .linkBlock {
         display: flex;
+        @media (max-width: 919px) {
+          display: inline-flex;
+        }
         .btn2 {
           cursor: pointer;
           background: $yellow;
@@ -364,6 +616,14 @@ hr {
       border: 0;
       width: 500px;
       height: 500px;
+      @media (max-width: 570px) {
+        width: 380px;
+        height: 300px;
+      }
+      @media (max-width: 410px) {
+        width: 280px;
+        height: 280px;
+      }
     }
   }
 }
@@ -376,11 +636,11 @@ hr {
   .contactItem {
     background: $black2;
     width: 300px;
-    height: 350px;
+    height: 300px;
     border-top-left-radius: 40px;
     border-bottom-right-radius: 40px;
     text-align: center;
-    padding-top: 100px;
+    padding-top: 60px;
     margin: 10px 0;
     .title {
       font-size: 32px;
@@ -388,8 +648,13 @@ hr {
     a {
       font-family: "Montserrat-Light";
       text-decoration: none;
-      color: #a8a8a8;
+      color: $grey;
       font-size: 20px;
+      transition: 300ms;
+    }
+    a:hover {
+      transition: 300ms;
+      color: $yellow;
     }
     p {
       font-size: 20px;

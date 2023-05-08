@@ -1,13 +1,12 @@
 import { useContext } from "react";
 import { CarouselContext } from "../Carousel-context";
-import "./Page.css";
+import "./Page.scss";
 
 export const Page = ({ children }) => {
   const { width } = useContext(CarouselContext);
-  // console.log(width);
   return (
     <div
-      className="page__main-container"
+      className={"page__main_container"}
       style={{
         minWidth: `${width}px`,
         maxWidth: `${width}px`,

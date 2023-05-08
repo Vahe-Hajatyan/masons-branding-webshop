@@ -4,10 +4,38 @@
   margin-top: 25px;
   display: flex;
   justify-content: space-around;
+  @media (max-width: 688px) {
+    flex-flow: column-reverse;
+    align-items: center;
+  }
+  .collapse {
+    position: absolute;
+    top: 35px;
+    right: 40px;
+
+    @media (max-width: 435px) {
+      top: 113px;
+      right: 55px;
+    }
+    @media (min-width: 689px) {
+      display: none;
+    }
+    img {
+      width: 40px;
+    }
+  }
   .searchBlock {
     display: flex;
     position: relative;
     align-items: center;
+
+    @media (max-width: 435px) {
+      align-self: self-start;
+      margin-left: 20px;
+    }
+    @media (max-width: 688px) {
+      margin-top: 20px;
+    }
     .search {
       color: $white;
       background: transparent;
@@ -22,6 +50,9 @@
       font-size: 12px;
       line-height: 12px;
       outline: none;
+      @media (max-width: 435px) {
+        width: 130px;
+      }
     }
     .buttonSearch {
       cursor: pointer;
@@ -29,6 +60,9 @@
       position: absolute;
       left: 0px;
       top: 16px;
+      @media (max-width: 688px) {
+        top: 0px;
+      }
       background: url(/src/assets/lupa.png) no-repeat 10px 10px;
       width: 35px;
       height: 35px;
@@ -40,6 +74,9 @@
   .flexContainer {
     display: inline-flex;
     align-items: center;
+    @media (max-width: 688px) {
+      display: none;
+    }
     .item {
       button {
         cursor: pointer;
@@ -69,7 +106,11 @@
 }
 
 .categories {
+  @media (max-width: 688px) {
+    display: none;
+  }
   ul {
+    padding: 0;
     margin-top: 25px;
     display: flex;
     justify-content: space-evenly;
@@ -89,6 +130,11 @@
     align-items: center;
     justify-content: center;
     transition: 200ms;
+
+    @media (max-width: 897px) {
+      font-size: 13px;
+      width: 93px;
+    }
     &:hover {
       transition: 200ms;
       color: $black;
@@ -96,6 +142,60 @@
       font-weight: 700;
       background: $white;
       transform: matrix(1, 0, -0.2, 1, 0, 0);
+    }
+  }
+}
+@-webkit-keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.categoriesCollapse {
+  -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  position: absolute;
+  top: 80px;
+  right: 13px;
+  width: 188px;
+  background: $black2;
+  border-radius: 15px;
+  @media (max-width: 435px) {
+    top: 160px;
+  }
+  @media (min-width: 688px) {
+    display: none;
+  }
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+
+    li {
+      color: $white;
+      font-family: "Montserrat-Light";
+      padding: 10px 0;
+    }
+    li:hover {
+      color: $yellow;
     }
   }
 }

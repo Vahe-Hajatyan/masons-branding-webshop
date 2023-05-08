@@ -94,8 +94,8 @@ export const Carousel = ({ children, infinite, oneSlide, number3 }) => {
     <CarouselContext.Provider value={{ width }}>
       <div
         className={`${number3 ? style.slider_block_number3 : ""} ${
-          style.slider_block
-        }`}
+          oneSlide ? style.slider_block_oneSlide : ""
+        } ${style.slider_block}`}
       >
         <div
           className={`${number3 ? style.button_block_number3 : ""} ${

@@ -40,16 +40,23 @@ footer {
         cursor: pointer;
         height: auto;
         margin: 10px 0 0 0;
+        transition: 300ms;
       }
       p:hover {
+        transition: 300ms;
         color: $yellow;
       }
       a {
         margin-top: 10px;
         font-family: "Montserrat-Light";
         text-decoration: none;
-        color: #a8a8a8;
+        color: $grey;
         font-size: 20px;
+        transition: 300ms;
+      }
+      a:hover {
+        transition: 300ms;
+        color: $yellow;
       }
     }
   }

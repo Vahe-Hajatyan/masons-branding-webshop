@@ -140,13 +140,13 @@ const Home = () => {
         </div>
         <CarouselCompound infinite>
           <CarouselCompound.Page>
-            <img src={exemple1} alt="" />
+            <img id="exemple" src={exemple1} alt="" />
           </CarouselCompound.Page>
           <CarouselCompound.Page>
-            <img src={exemple2} alt="" />
+            <img id="exemple" src={exemple2} alt="" />
           </CarouselCompound.Page>
           <CarouselCompound.Page>
-            <img src={exemple1} alt="" />
+            <img id="exemple" src={exemple1} alt="" />
           </CarouselCompound.Page>
         </CarouselCompound>
       </div>
@@ -160,37 +160,43 @@ const Home = () => {
         <div className={style.stockSlider}>
           <CarouselCompound infinite oneSlide>
             <CarouselCompound.Page>
-              <div className={style.stockTextBlock}>
-                <h2>Русский корабль</h2>
-                <p>
-                  Купи футболку и 10% с каждой покупки <br /> пойдёт на нуждый
-                  ВСУ.
-                </p>
-                <button className={style.btn}>Каталог</button>
+              <div className={style.stockBlock}>
+                <div className={style.stockTextBlock}>
+                  <h2>Русский корабль</h2>
+                  <p>
+                    Купи футболку и 10% с каждой покупки <br /> пойдёт на нуждый
+                    ВСУ.
+                  </p>
+                  <button className={style.btn}>Каталог</button>
+                </div>
+                <img className={style.ImgBlock} src={mecMayka} alt="img" />
               </div>
-              <img className={style.ImgBlock} src={mecMayka} alt="img" />
             </CarouselCompound.Page>
             <CarouselCompound.Page>
-              <div className={style.stockTextBlock}>
-                <h2>Русский корабль</h2>
-                <p>
-                  Купи футболку и 10% с каждой покупки <br /> пойдёт на нуждый
-                  ВСУ.
-                </p>
-                <button className={style.btn}>Каталог</button>
+              <div className={style.stockBlock}>
+                <div className={style.stockTextBlock}>
+                  <h2>Русский корабль</h2>
+                  <p>
+                    Купи футболку и 10% с каждой покупки <br /> пойдёт на нуждый
+                    ВСУ.
+                  </p>
+                  <button className={style.btn}>Каталог</button>
+                </div>
+                <img className={style.ImgBlock} src={mecMayka} alt="img" />
               </div>
-              <img className={style.ImgBlock} src={mecMayka} alt="img" />
             </CarouselCompound.Page>
             <CarouselCompound.Page>
-              <div className={style.stockTextBlock}>
-                <h2>Русский корабль</h2>
-                <p>
-                  Купи футболку и 10% с каждой покупки <br /> пойдёт на нуждый
-                  ВСУ.
-                </p>
-                <button className={style.btn}>Каталог</button>
+              <div className={style.stockBlock}>
+                <div className={style.stockTextBlock}>
+                  <h2>Русский корабль</h2>
+                  <p>
+                    Купи футболку и 10% с каждой покупки <br /> пойдёт на нуждый
+                    ВСУ.
+                  </p>
+                  <button className={style.btn}>Каталог</button>
+                </div>
+                <img className={style.ImgBlock} src={mecMayka} alt="img" />
               </div>
-              <img className={style.ImgBlock} src={mecMayka} alt="img" />
             </CarouselCompound.Page>
           </CarouselCompound>
         </div>
@@ -287,28 +293,13 @@ const Home = () => {
         <div className={style.reviewsBlock}>
           <CarouselCompound infinite oneSlide number3>
             <CarouselCompound.Page>
-              <img
-                style={{ width: "100%" }}
-                className={style.ImgBlock}
-                src={iphone12}
-                alt="img"
-              />
+              <img id="iphoneBlock" src={iphone12} alt="img" />
             </CarouselCompound.Page>
             <CarouselCompound.Page>
-              <img
-                style={{ width: "100%" }}
-                className={style.ImgBlock}
-                src={iphone12}
-                alt="img"
-              />
+              <img id="iphoneBlock" src={iphone12} alt="img" />
             </CarouselCompound.Page>
             <CarouselCompound.Page>
-              <img
-                style={{ width: "100%" }}
-                className={style.ImgBlock}
-                src={iphone12}
-                alt="img"
-              />
+              <img id="iphoneBlock" src={iphone12} alt="img" />
             </CarouselCompound.Page>
           </CarouselCompound>
         </div>
@@ -329,11 +320,11 @@ const Home = () => {
         </div>
       </div>
       <div>
-        <div className={style.titleBlock}>
+        <div className={style.contactTitle}>
           <h2>
             Свяжитесь с <span>нами</span>
           </h2>
-          <p>Это бысто и удобно</p>
+          <p>Это быстро и удобно</p>
         </div>
         <div className={style.contactUs}>
           <div className={style.formBlock}>

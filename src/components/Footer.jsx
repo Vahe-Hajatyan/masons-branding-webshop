@@ -42,9 +42,7 @@ const Footer = () => {
         </div>
       </div>
       <hr />
-      <p className={style.copyright}>
-        copyright © 2023 HooBank. All Rights Reserved.
-      </p>
+      <p className={style.copyright}>All Rights Reserved copyright: ©2023</p>
     </footer>
   );
 };

@@ -1,0 +1,39 @@
+.page__main_container {
+  height: 100%;
+  // display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  @media (max-width: 880px) {
+    flex-wrap: wrap;
+  }
+  #exemple {
+    width: 294px;
+    @media (max-width: 932px) {
+      width: 200px;
+    }
+    @media (max-width: 846px) {
+      width: 150px;
+    }
+    @media (max-width: 768px) {
+      width: 250px;
+    }
+    @media (max-width: 671px) {
+      width: 200px;
+    }
+    @media (max-width: 615px) {
+      width: 250px;
+    }
+  }
+  #iphoneBlock {
+    width: 400px;
+    @media (max-width: 465px) {
+      width: 350px;
+    }
+    @media (max-width: 412px) {
+      width: 300px;
+    }
+    @media (max-width: 366px) {
+      width: 240px;
+    }
+  }
+}
