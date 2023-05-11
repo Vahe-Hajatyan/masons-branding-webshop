@@ -33,9 +33,8 @@ export const Carousel = ({ children, infinite, oneSlide, number3 }) => {
 
   useEffect(() => {
     const resizeHandler = () => {
-      // debugger;
       const windowElWidth = windowElRef.current.offsetWidth;
-      console.log("resized", windowElWidth);
+      // console.log("resized", windowElWidth);
       setWidth(windowElWidth);
       setOffset(-(clonesCount.head * width)); // to prevent wrong offset
     };

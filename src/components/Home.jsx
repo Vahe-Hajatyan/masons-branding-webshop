@@ -29,12 +29,9 @@ const Home = () => {
               <br />
               <span>branding</span>
               <br />
-              wordshop
+              webshop
             </h1>
-            <p>
-              Высококачественная печать <br /> Брендирование одежды и
-              аксессуаров
-            </p>
+            <p>Высококачественная печать Брендирование одежды и аксессуаров</p>
             <button className={style.btn}>Каталог</button>
           </div>
           <div className={style.imgBlock}>
