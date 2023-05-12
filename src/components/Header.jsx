@@ -9,12 +9,8 @@ import { Link } from "react-router-dom";
 const Header = () => {
   const [toggle, setToggle] = useState(false);
   const [pathHost, setPathHost] = useState(window.location.pathname);
-  const size = document.body.offsetWidth;
   const resize = () => {
-    if (size < 688) {
-      setToggle(false);
-    }
-    return window.removeEventListener("resize", resize);
+    setToggle(false);
   };
   window.addEventListener("resize", resize);
   const path = () => {
@@ -65,14 +61,20 @@ const Header = () => {
               Футболки
             </li>
           </Link>
-          <Link onClick={path} to="/">
-            <li>Штаны</li>
+          <Link onClick={path} to="/trousers">
+            <li className={pathHost === "/trousers" ? style.active : ""}>
+              Штаны
+            </li>
           </Link>
-          <Link onClick={path} to="/">
-            <li>Кроссовки</li>
+          <Link onClick={path} to="/sneakers">
+            <li className={pathHost === "/sneakers" ? style.active : ""}>
+              Кроссовки
+            </li>
           </Link>
-          <Link onClick={path} to="/">
-            <li>аксессуары</li>
+          <Link onClick={path} to="/accessories">
+            <li className={pathHost === "/accessories" ? style.active : ""}>
+              Аксессуары
+            </li>
           </Link>
           {toggle && (
             <>

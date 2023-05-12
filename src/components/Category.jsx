@@ -1,18 +1,25 @@
 import React, { useEffect, useState } from "react";
-import style from "../scss/Tshirt.module.scss";
+import style from "../scss/Category.module.scss";
 import sevMayka from "../assets/sevmayka.png";
 import spitakmayka from "../assets/spitakmayka.png";
 import dexinmayka from "../assets/dexinmayka.png";
 import minLeft from "../assets/minleft.png";
 import minRight from "../assets/minright.png";
-const Tshirt = () => {
+const Category = ({ title, page }) => {
   const [price, setPrice] = useState(true);
+  console.log(page);
   return (
     <section>
       <div className={style.titleBlock}>
         <div className={style.title}>
-          <h1>
-            <span>Фут</span>болки
+          <h1
+            className={
+              page == "accessories" || page == "sneakers"
+                ? style.smallTitle
+                : ""
+            }
+          >
+            {title}
           </h1>
           <p>Любые размеры и формы</p>
         </div>
@@ -96,4 +103,4 @@ const Tshirt = () => {
   );
 };
 
-export default Tshirt;
+export default Category;

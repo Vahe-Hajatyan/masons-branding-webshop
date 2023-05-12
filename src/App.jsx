@@ -2,14 +2,29 @@ import Header from "./components/Header";
 import { Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import Footer from "./components/Footer";
-import Tshirt from "./components/Tshirt";
+import Category from "./components/Category";
 function App() {
   return (
     <>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/tshirt" element={<Tshirt />} />
+        <Route
+          path="/tshirt"
+          element={<Category page="tshirt" title="футболки" />}
+        />
+        <Route
+          path="/trousers"
+          element={<Category page="trousers" title="штаны" />}
+        />
+        <Route
+          path="/sneakers"
+          element={<Category page="sneakers" title="кроссовки" />}
+        />
+        <Route
+          path="/accessories"
+          element={<Category page="accessories" title="аксессуары" />}
+        />
       </Routes>
       <Footer />
     </>
