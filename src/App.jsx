@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import Footer from "./components/Footer";
 import Category from "./components/Category";
+import Card from "./components/Card";
 function App() {
   return (
     <>
@@ -25,6 +26,7 @@ function App() {
           path="/accessories"
           element={<Category page="accessories" title="аксессуары" />}
         />
+        <Route path="/card" element={<Card />} />
       </Routes>
       <Footer />
     </>

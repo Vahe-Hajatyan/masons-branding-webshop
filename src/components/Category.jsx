@@ -5,9 +5,10 @@ import spitakmayka from "../assets/spitakmayka.png";
 import dexinmayka from "../assets/dexinmayka.png";
 import minLeft from "../assets/minleft.png";
 import minRight from "../assets/minright.png";
+import { Link } from "react-router-dom";
+
 const Category = ({ title, page }) => {
   const [price, setPrice] = useState(true);
-  console.log(page);
   return (
     <section>
       <div className={style.titleBlock}>
@@ -41,11 +42,14 @@ const Category = ({ title, page }) => {
           <h3>Футболка Белая</h3>
           <p>20$</p>
         </div>
-        <div className={style.item}>
-          <img src={dexinmayka} />
-          <h3>Желтый Худи</h3>
-          <p>20$</p>
-        </div>
+        <Link to={"/card"}>
+          <div className={style.item}>
+            <img src={dexinmayka} />
+            <h3>Желтый Худи</h3>
+            <p>250$</p>
+          </div>
+        </Link>
+
         <div className={style.item}>
           <img src={sevMayka} />
           <h3>Футболка Черная</h3>

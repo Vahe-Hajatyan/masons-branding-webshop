@@ -6,18 +6,13 @@ import izbrnie from "../assets/izbrnie.png";
 import close from "../assets/close.svg";
 import menu from "../assets/menu.svg";
 import { Link } from "react-router-dom";
+import Navigation from "./utils/Navigation";
 const Header = () => {
   const [toggle, setToggle] = useState(false);
-  const [pathHost, setPathHost] = useState(window.location.pathname);
   const resize = () => {
     setToggle(false);
   };
   window.addEventListener("resize", resize);
-  const path = () => {
-    setTimeout(() => {
-      setPathHost(window.location.pathname);
-    }, 1);
-  };
   return (
     <header>
       <div className={style.headerBlock}>
@@ -52,41 +47,7 @@ const Header = () => {
         </div>
       </div>
       <div className={toggle ? style.categoriesCollapse : style.categories}>
-        <ul>
-          <Link onClick={path} to="/">
-            <li className={pathHost === "/" ? style.active : ""}>Главная</li>
-          </Link>
-          <Link onClick={path} to="/tshirt">
-            <li className={pathHost === "/tshirt" ? style.active : ""}>
-              Футболки
-            </li>
-          </Link>
-          <Link onClick={path} to="/trousers">
-            <li className={pathHost === "/trousers" ? style.active : ""}>
-              Штаны
-            </li>
-          </Link>
-          <Link onClick={path} to="/sneakers">
-            <li className={pathHost === "/sneakers" ? style.active : ""}>
-              Кроссовки
-            </li>
-          </Link>
-          <Link onClick={path} to="/accessories">
-            <li className={pathHost === "/accessories" ? style.active : ""}>
-              Аксессуары
-            </li>
-          </Link>
-          {toggle && (
-            <>
-              <Link onClick={path} to="/">
-                <li>Корзина</li>
-              </Link>
-              <Link to="/">
-                <li>Избранное</li>
-              </Link>
-            </>
-          )}
-        </ul>
+        <Navigation toggle={toggle} />
       </div>
     </header>
   );

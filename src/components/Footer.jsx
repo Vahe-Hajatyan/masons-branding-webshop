@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import style from "../scss/Footer.module.scss";
 import logo from "../assets/logo.png";
 import telegram from "../assets/telegram.png";
 import insta from "../assets/insta.png";
+import { Link } from "react-router-dom";
+import Navigation from "./utils/Navigation";
 
 const Footer = () => {
   return (
@@ -29,11 +31,7 @@ const Footer = () => {
         </div>
         <div className={style.pageBlock}>
           <h2>Страницы</h2>
-          <p>Главная</p>
-          <p>Футболки</p>
-          <p>Штаны</p>
-          <p>Кроссовки</p>
-          <p>аксессуары</p>
+          <Navigation />
         </div>
         <div className={style.pageBlock}>
           <h2>Контакты</h2>
