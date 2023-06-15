@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import style from "../../scss/Card.module.scss";
 
-const Dropdown = ({ itemArr, toggleValue, title, isColor }) => {
+const Dropdown = ({ itemArr, toggleValue, title, isColor, isBasket }) => {
   const [toggle, setToggle] = useState(false);
   const [item, setItem] = useState(itemArr[0]);
   const onChangeItem = (val) => {
@@ -9,9 +9,11 @@ const Dropdown = ({ itemArr, toggleValue, title, isColor }) => {
     setItem(val);
   };
   return (
-    <div className={style.dropdown}>
+    <div
+      className={`${style.dropdown} ${isBasket ? style.dropdownBasket : ""}`}
+    >
       <p>
-        {title}:
+        {!isBasket && <>{title}:</>}
         <button
           onClick={() => setToggle(!toggle)}
           className={`${style.dropBtn} ${isColor ? style.dropBtn3 : ""}`}

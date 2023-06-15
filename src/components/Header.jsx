@@ -35,9 +35,11 @@ const Header = () => {
             <button>UA</button>
           </div>
           <div className={style.item}>
-            <button>
-              <img src={karzina} />
-            </button>
+            <Link to={"/basket"}>
+              <button>
+                <img src={karzina} />
+              </button>
+            </Link>
           </div>
           <div className={style.item}>
             <button>

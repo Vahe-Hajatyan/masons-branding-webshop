@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import style from "../../scss/Card.module.scss";
 
-const Dropdown = ({ countValue }) => {
+const Dropdown = ({ countValue, isBasket }) => {
   const [count, setCount] = useState(1);
   const onPlusCount = () => {
     if (count < 99) {
@@ -15,9 +15,11 @@ const Dropdown = ({ countValue }) => {
   };
   countValue(count);
   return (
-    <div className={style.dropdown}>
+    <div
+      className={`${style.dropdown} ${isBasket ? style.dropdownBasket : ""}`}
+    >
       <p>
-        Количество:
+        {!isBasket && "Количество:"}
         <button className={`${style.dropBtn} ${style.dropBtn2}`}>
           <div className={style.count}>
             <p onClick={onMinusCount}>-</p>

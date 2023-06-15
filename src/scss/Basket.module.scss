@@ -1,0 +1,269 @@
+@import "font.scss";
+@import "vars.scss";
+
+.basketBlock {
+  margin-top: 55px;
+  .basketItems {
+    h3 {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 50px;
+    }
+    .basketItem {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 50px;
+      @media (max-width: 519px) {
+        text-align: center;
+      }
+      .content {
+        display: flex;
+        align-items: center;
+        @media (max-width: 379px) {
+          display: contents;
+        }
+        .price {
+          color: $yellow;
+          font-size: 32px;
+          height: auto;
+          margin-right: 20px;
+          @media (max-width: 450px) {
+            margin: 0 10px;
+          }
+        }
+        .btnBlock {
+          width: 40px;
+          height: 40px;
+          .delete {
+            cursor: pointer;
+            background: $yellow;
+            width: 40px;
+            height: 40px;
+            border: none;
+            border-radius: 20px;
+            visibility: hidden;
+            &::before {
+              content: "Х";
+              font-size: 18px;
+            }
+          }
+        }
+      }
+      img {
+        max-width: 164px;
+        min-width: 164px;
+        max-height: 164px;
+        min-height: 164px;
+        @media (max-width: 885px) {
+          max-width: 200px;
+          min-width: 200px;
+          max-height: 200px;
+          min-height: 200px;
+        }
+      }
+      p {
+        margin: 0;
+        height: auto;
+      }
+      &:hover {
+        .content {
+          .btnBlock {
+            .delete {
+              visibility: visible;
+            }
+          }
+        }
+      }
+      .title {
+        width: 340px;
+        margin-left: 30px;
+        word-break: break-all;
+        @media (max-width: 980px) {
+          width: 265px;
+          margin-left: 20px;
+        }
+        @media (max-width: 980px) {
+          width: 310px;
+          margin-left: 10px;
+        }
+        @media (max-width: 509px) {
+          margin: 15px 0 15px 0;
+        }
+        h4 {
+          font-family: "Montserrat-Light";
+          color: $white;
+          font-size: 32px;
+          margin: 0;
+          @media (max-width: 980px) {
+            font-size: 25px;
+          }
+          @media (max-width: 370px) {
+            font-size: 22px;
+          }
+        }
+        p {
+          font-size: 20px;
+          @media (max-width: 980px) {
+            font-size: 18px;
+          }
+          @media (max-width: 370px) {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+  .checkoutBlock {
+    .title {
+      text-align: center;
+      margin: 0 0 70px 0;
+      font-size: 36px;
+      @media (max-width: 411px) {
+        font-size: 30px;
+        margin: 0 0 50px 0;
+      }
+    }
+    .checkoutItem {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 40px;
+      @media (max-width: 835px) {
+        flex-direction: column;
+        align-items: center;
+      }
+      .inputBlock {
+        display: flex;
+        margin: 0 50px 0 0;
+        @media (max-width: 835px) {
+          margin: 0;
+        }
+        form {
+          input {
+            display: flex;
+            color: $yellow;
+            background: $black2;
+            width: 370px;
+            height: 50px;
+            border: none;
+            padding-left: 10px;
+            padding-right: 10px;
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 12px;
+            margin-bottom: 20px;
+            outline: none;
+            @media (max-width: 530px) {
+              width: 310px;
+            }
+            @media (max-width: 410px) {
+              width: 243px;
+            }
+            &::placeholder {
+              color: $yellow;
+            }
+          }
+        }
+      }
+      .orderBlock {
+        .checkBox {
+          display: flex;
+          .delivery {
+            margin-right: 60px;
+            @media (max-width: 380px) {
+              margin-right: 10px;
+            }
+          }
+          span {
+            font-family: "Montserrat-Light";
+            font-size: 15px;
+            color: $yellow;
+            @media (max-width: 360px) {
+              font-size: 12px;
+            }
+          }
+          h3 {
+            font-size: 18px;
+          }
+          .checkBlock {
+            margin-bottom: 15px;
+          }
+          input[type="checkbox"] {
+            -webkit-appearance: none;
+            appearance: none;
+            background-color: $black2;
+            margin: 0 10px 0 0;
+            border: none;
+            font: inherit;
+            width: 1.15em;
+            height: 1.15em;
+            border-radius: 0.15em;
+            transform: translateY(-0.075em);
+          }
+          input[type="checkbox"]::before {
+            content: "";
+            display: inline-block;
+            margin-left: 4px;
+            width: 0.65em;
+            height: 0.65em;
+            clip-path: polygon(
+              14% 44%,
+              0 65%,
+              50% 100%,
+              100% 16%,
+              80% 0%,
+              43% 62%
+            );
+            transform: scale(0);
+            transform-origin: bottom left;
+            transition: 120ms transform ease-in-out;
+            box-shadow: inset 1em 1em $yellow;
+            background-color: CanvasText;
+          }
+          input[type="checkbox"]:checked::before {
+            transform: scale(1);
+          }
+        }
+        .priceItems {
+          margin: 25px 0 15px 0;
+          .priceItem {
+            p {
+              display: inline-block;
+              font-size: 16px;
+              margin-bottom: 7px;
+              height: auto;
+            }
+            span {
+              font-family: "Montserrat-Light";
+              font-size: 16px;
+              color: $yellow;
+              margin-left: 5px;
+            }
+          }
+          .totalPrice {
+            margin: 20px 0;
+            p {
+              color: $white;
+              font-size: 32px;
+            }
+            span {
+              font-size: 24px;
+            }
+          }
+          .sendBtn {
+            width: 220px;
+            height: 50px;
+            background: transparent;
+            font-family: "Inter";
+            border: 1px solid $yellow;
+            color: $yellow;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}

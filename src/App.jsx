@@ -4,6 +4,7 @@ import Home from "./components/Home";
 import Footer from "./components/Footer";
 import Category from "./components/Category";
 import Card from "./components/Card";
+import Basket from "./components/Basket";
 function App() {
   return (
     <>
@@ -27,6 +28,7 @@ function App() {
           element={<Category page="accessories" title="аксессуары" />}
         />
         <Route path="/card" element={<Card />} />
+        <Route path="/basket" element={<Basket />} />
       </Routes>
       <Footer />
     </>
