@@ -69,8 +69,6 @@
       border-radius: 22px;
     }
   }
-  //   .logoBlock {
-  //   }
   .flexContainer {
     display: inline-flex;
     align-items: center;
@@ -80,24 +78,24 @@
     .item {
       button {
         cursor: pointer;
-        color: $white;
+        color: $yellow;
         background: transparent;
         border: none;
-        font-family: "Inter";
+        font-family: "Montserrat-Light";
         font-style: normal;
         font-weight: 400;
-        font-size: 16px;
+        font-size: 15px;
         line-height: 19px;
       }
     }
+    .item:nth-child(2) {
+      border: 1px solid $yellow;
+      border-radius: 5px;
+      padding: 4px 0;
+      margin: 0 3px;
+    }
     .item:nth-child(4) {
       margin: 0 5px 0 10px;
-    }
-    .line {
-      border: 1px solid $white;
-      width: 0;
-      height: 20px;
-      margin: 0 5px;
     }
     span {
       color: $white;
@@ -115,6 +113,7 @@
     display: flex;
     justify-content: space-evenly;
     list-style: none;
+
     a {
       text-decoration: none;
       li {
@@ -200,6 +199,10 @@
     flex-direction: column;
     align-items: center;
     padding: 0;
+    hr {
+      width: 185px;
+      box-shadow: none;
+    }
     a {
       text-decoration: none;
       li {

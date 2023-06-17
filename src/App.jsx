@@ -5,6 +5,8 @@ import Footer from "./components/Footer";
 import Category from "./components/Category";
 import Card from "./components/Card";
 import Basket from "./components/Basket";
+import SignIn from "./components/register/SignIn";
+import SignUp from "./components/register/SignUp";
 function App() {
   return (
     <>
@@ -29,6 +31,8 @@ function App() {
         />
         <Route path="/card" element={<Card />} />
         <Route path="/basket" element={<Basket />} />
+        <Route path="/sign-in" element={<SignIn />} />
+        <Route path="/sign-up" element={<SignUp />} />
       </Routes>
       <Footer />
     </>

@@ -28,11 +28,14 @@ const Header = () => {
         </div>
         <div className={style.flexContainer}>
           <div className={style.item}>
-            <button>RU</button>
+            <Link to="/sign-in">
+              <button>Sign in</button>
+            </Link>
           </div>
-          <span className={style.line}></span>
           <div className={style.item}>
-            <button>UA</button>
+            <Link to="/sign-up">
+              <button>Sign up</button>
+            </Link>
           </div>
           <div className={style.item}>
             <Link to={"/basket"}>

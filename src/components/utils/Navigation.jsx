@@ -33,8 +33,22 @@ const Navigation = ({ toggle = false }) => {
       </Link>
       {toggle && (
         <>
-          <Link onClick={path} to="/">
-            <li>Корзина</li>
+          <hr />
+          <Link onClick={path} to="/sign-in">
+            <li className={pathHost === "/sign-in" ? style.active : ""}>
+              Sign in
+            </li>
+          </Link>
+          <Link onClick={path} to="/sign-up">
+            <li className={pathHost === "/sign-up" ? style.active : ""}>
+              Sign up
+            </li>
+          </Link>
+          <hr />
+          <Link onClick={path} to="/basket">
+            <li className={pathHost === "/basket" ? style.active : ""}>
+              Корзина
+            </li>
           </Link>
           <Link to="/">
             <li>Избранное</li>
