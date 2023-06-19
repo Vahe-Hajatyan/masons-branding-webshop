@@ -1,0 +1,39 @@
+@import "font.scss";
+@import "vars.scss";
+
+.title {
+  h3 {
+    text-align: center;
+    margin: 50px 0 100px 0;
+  }
+}
+.items {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  @media (max-width: 750px) {
+    justify-content: space-around;
+  }
+  .item {
+    text-align: center;
+    img {
+      min-width: 250px;
+      max-width: 250px;
+      min-height: 250px;
+      max-height: 250px;
+    }
+    h3 {
+      color: $grey;
+      font-family: "Montserrat-Light";
+      margin: 10px 0 10px 0;
+      font-size: 20px;
+      width: 250px;
+      word-break: break-all;
+    }
+    p {
+      height: auto;
+      font-size: 24px;
+      margin-bottom: 40px;
+    }
+  }
+}

@@ -50,7 +50,7 @@ const Navigation = ({ toggle = false }) => {
               Корзина
             </li>
           </Link>
-          <Link to="/">
+          <Link to="/favorite">
             <li>Избранное</li>
           </Link>
         </>

@@ -45,9 +45,11 @@ const Header = () => {
             </Link>
           </div>
           <div className={style.item}>
-            <button>
-              <img src={izbrnie} />
-            </button>
+            <Link to="/favorite">
+              <button>
+                <img src={izbrnie} />
+              </button>
+            </Link>
           </div>
         </div>
       </div>
