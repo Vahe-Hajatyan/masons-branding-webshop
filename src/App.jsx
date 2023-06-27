@@ -8,6 +8,7 @@ import Basket from "./components/Basket";
 import SignIn from "./components/register/SignIn";
 import SignUp from "./components/register/SignUp";
 import Favorites from "./components/Favorites";
+import AddProducts from "./components/AddProducts";
 function App() {
   return (
     <>
@@ -35,6 +36,7 @@ function App() {
         <Route path="/favorite" element={<Favorites />} />
         <Route path="/sign-in" element={<SignIn />} />
         <Route path="/sign-up" element={<SignUp />} />
+        <Route path="/addProducts" element={<AddProducts />} />
       </Routes>
       <Footer />
     </>
