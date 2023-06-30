@@ -2,102 +2,125 @@ import React, { useState } from "react";
 import style from "../scss/AddProducts.module.scss";
 import avatar from "../assets/tshirt.png";
 import axios from "axios";
+import { useForm } from "react-hook-form";
 
 const AddProducts = () => {
-  const [product, setProduct] = useState({
-    comment: [],
-    Recommended: [],
-    favorites: false,
-    basket: false,
-    price: Number,
-    maxCount: Number,
-    myFile: "",
-    name: "",
-    teg: "",
-    size: "",
-    color: "",
-    description: "",
+  const [img, setImg] = useState("");
+  const {
+    register,
+    handleSubmit,
+    getValues,
+    setValue,
+    formState: { errors },
+  } = useForm({
+    mode: "onBlur",
+    defaultValues: {
+      comment: [],
+      recommended: [],
+      favorites: false,
+      basket: false,
+      price: Number,
+      maxCount: Number,
+      myFile: "",
+      name: "",
+      teg: "",
+      size: "",
+      color: "",
+      description: "",
+    },
   });
-  const createProduct = async (newProduct) => {
+  // const createProduct = async (newProduct) => {
+  //   try {
+  //     console.log(newProduct);
+  //     await axios.post("http://localhost:3333/product", newProduct);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
+
+  const submit = async (value) => {
     try {
-      console.log(newProduct);
-      await axios.post("http://localhost:3333/product", newProduct);
+      console.log(value);
+      await axios.post("http://localhost:3333/product", value);
     } catch (error) {
       console.log(error);
     }
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    createProduct(product);
-    console.log("Uploaded");
-  };
-
   const handleFileUpload = async (e) => {
     const file = e.target.files[0];
     const base64 = await convertToBase64(file);
-    console.log(base64);
-    setProduct({ ...product, myFile: base64 });
+    setValue("myFile", base64);
+    const val = getValues("myFile");
+    setImg(val);
   };
-
   return (
     <div className={style.productsBlock}>
-      <form onSubmit={handleSubmit}>
-        <label
-          htmlFor="file-upload"
-          title="добавьте фотографию"
-          className={style.customFileUpload}
-        >
-          <img src={product.myFile || avatar} alt="" />
+      <form onSubmit={handleSubmit(submit)}>
+        <label title="добавьте фотографию" className={style.customFileUpload}>
+          <img src={img || avatar} alt="img" />
         </label>
         <input
           type="file"
-          id="file-upload"
+          className={style.fileUpload}
           accept=".jpeg, .png, .jpg"
           onChange={(e) => handleFileUpload(e)}
-          hidden
         />
         <input
+          className={errors.name && style.validation}
           placeholder="добавьте имя продукта"
-          value={product.name}
-          onChange={(e) => setProduct({ ...product, name: e.target.value })}
+          {...register("name", {
+            required: "добавьте имя продукта",
+          })}
         />
         <input
+          className={errors.teg && style.validation}
           placeholder="добавьте тэг через запятую"
-          value={product.teg}
-          onChange={(e) => setProduct({ ...product, teg: e.target.value })}
+          {...register("teg", {
+            required: "добавьте тэг через запятую",
+          })}
         />
         <input
+          className={errors.price && style.validation}
           type="number"
           placeholder="добавьте цену"
-          value={product.price}
-          onChange={(e) => setProduct({ ...product, price: e.target.value })}
+          {...register("price", {
+            required: "обавьте цену",
+          })}
         />
 
         <input
+          className={errors.maxCount && style.validation}
           type="number"
           placeholder="добавьте макс-количество"
-          value={product.maxCount}
-          onChange={(e) => setProduct({ ...product, maxCount: e.target.value })}
+          {...register("maxCount", {
+            required: "добавьте макс-количество",
+          })}
         />
         <input
+          className={errors.size && style.validation}
           placeholder="добавьте размер через запятую"
-          value={product.size}
-          onChange={(e) => setProduct({ ...product, size: e.target.value })}
+          {...register("size", {
+            required: "добавьте размер через запятую",
+          })}
         />
         <input
+          className={errors.color && style.validation}
           placeholder="добавьте цвет через запятую"
-          value={product.color}
-          onChange={(e) => setProduct({ ...product, color: e.target.value })}
+          {...register("color", {
+            required: "добавьте цвет через запятую",
+          })}
         />
         <textarea
+          className={errors.description && style.validation}
           placeholder="добавьте описание"
-          value={product.description}
-          onChange={(e) =>
-            setProduct({ ...product, description: e.target.value })
-          }
+          {...register("description", {
+            required: "добавьте описание",
+          })}
         />
-        <button type="submit">Отправить</button>
+        <button disabled={img == ""} type="submit">
+          Отправить
+        </button>
       </form>
     </div>
   );

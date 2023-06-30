@@ -20,6 +20,9 @@
         width: 245px;
       }
     }
+    .validation {
+      border-bottom: 1px solid red;
+    }
     textarea {
       background: $black2;
       width: 290px;
@@ -28,6 +31,7 @@
       color: $grey;
       resize: none;
       border: none;
+      border-bottom: 1px solid $grey;
       outline: none;
       margin: 20px 0;
       @media (max-width: 380px) {
@@ -38,9 +42,37 @@
     input::-webkit-inner-spin-button {
       -webkit-appearance: none;
     }
+    input:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0px 1000px $black inset;
+      -webkit-text-fill-color: $grey !important;
+    }
+    .fileUpload {
+      color: transparent;
+      border: none;
+      width: 150px;
+    }
+    .fileUpload::-webkit-file-upload-button {
+      visibility: hidden;
+    }
+    .fileUpload::before {
+      content: "выберите фото";
+      color: $yellow;
+      background: transparent;
+      border: 1px solid $yellow;
+      display: inline-block;
+      padding: 12px 24px;
+      outline: none;
+      white-space: nowrap;
+      -webkit-user-select: none;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .fileUpload:active {
+      outline: 0;
+    }
+
     .customFileUpload {
       img {
-        cursor: pointer;
         min-width: 250px;
         max-width: 250px;
         min-height: 250px;
@@ -61,6 +93,9 @@
     button:hover {
       transition: 300ms;
       box-shadow: 0px 0px 12px $yellow;
+    }
+    button:disabled {
+      cursor: not-allowed;
     }
   }
 }
